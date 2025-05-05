@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTH202 Discrete Mathematics</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body { background-color: #f9f9f9; color: #333; }
+    .tab-content { padding: 20px; background: #fff; border: 1px solid #ddd; border-top: none; }
+    .quiz-question { margin-top: 15px; }
+    .quiz-option { margin-left: 15px; }
+  </style>
+</head>
+<body>
+<div class="container mt-5">
+  <h1 class="text-center mb-4">MTH202 Discrete Mathematics</h1>
+  <ul class="nav nav-tabs" id="lectureTabs" role="tablist">
+    <li class="nav-item" role="presentation"><button class="nav-link active" id="lec1-tab" data-bs-toggle="tab" data-bs-target="#lec1" type="button">Lecture 1</button></li>
+    <li class="nav-item" role="presentation"><button class="nav-link" id="lec2-tab" data-bs-toggle="tab" data-bs-target="#lec2" type="button">Lecture 2</button></li>
+    <li class="nav-item" role="presentation"><button class="nav-link" id="lec3-tab" data-bs-toggle="tab" data-bs-target="#lec3" type="button">Lecture 3</button></li>
+    <li class="nav-item" role="presentation"><button class="nav-link" id="lec4-tab" data-bs-toggle="tab" data-bs-target="#lec4" type="button">Lecture 4</button></li>
+    <li class="nav-item" role="presentation"><button class="nav-link" id="lec5-tab" data-bs-toggle="tab" data-bs-target="#lec5" type="button">Lecture 5</button></li>
+  </ul>
+  <div class="tab-content" id="lectureTabsContent">
+    <div class=\"tab-pane fade show active\" id=\"lec1\" role=\"tabpanel\">
+<h3>Lecture 1 – Logic (Simplified Summary)</h3>
+<p><strong>Goal:</strong> Learn how to express ideas precisely using logic and understand when an argument is valid or invalid.</p>
+
+<h4>🔹 What is Logic?</h4>
+<p>Logic is the study of how to think correctly. It helps us understand whether a statement or an argument makes sense and is based on truth.</p>
+
+<h4>🔹 What is a Statement? (Also called a Proposition)</h4>
+<p>A <strong>statement</strong> is any sentence that can be clearly labeled as either <strong>true (T)</strong> or <strong>false (F)</strong>—but not both at the same time.</p>
+<ul>
+  <li>✅ “2 + 2 = 4” → True</li>
+  <li>✅ “Today is Sunday” → Depends on the day, but still a statement</li>
+  <li>✅ “Grass is green” → True</li>
+  <li>✅ “4 + 2 = 7” → False</li>
+  <li>❌ “Close the door!” → Command, not a statement</li>
+  <li>❌ “x &gt; 2” → We don’t know what x is, so it’s not a complete statement</li>
+</ul>
+<p>💡 <strong>Real-Life Example:</strong><br>
+"Rehman lives in Canada." → This is a statement. It can be checked to be true or false.</p>
+
+<h4>🔹 Simple vs. Compound Statements</h4>
+<ul>
+  <li><strong>Simple statement:</strong> Just one idea (e.g., “It is raining.”)</li>
+  <li><strong>Compound statement:</strong> Combines two or more ideas using logical connectives.</li>
+</ul>
+
+<h4>🔹 Logical Connectives (AND, OR, NOT)</h4>
+<table class="table table-bordered">
+  <thead><tr><th>Symbol</th><th>Connective</th><th>Meaning</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td>~p</td><td>NOT</td><td>Opposite of statement</td><td>If p = “It is sunny”, ~p = “It is not sunny”</td></tr>
+    <tr><td>p ∧ q</td><td>AND</td><td>Both must be true</td><td>“Ali is studying AND it is raining”</td></tr>
+    <tr><td>p ∨ q</td><td>OR</td><td>At least one is true</td><td>“Ali is at home OR at the gym”</td></tr>
+  </tbody>
+</table>
+<p>💡 <strong>Real-Life Example:</strong><br>
+“The internet is working AND the power is on.” → Only true if both are true.<br>
+“The light is ON OR it is daytime.” → True even if only one is true.</p>
+
+<h4>🔹 Truth Values (Truth Table Basics)</h4>
+<table class="table table-bordered">
+  <thead><tr><th>p</th><th>q</th><th>p ∧ q (AND)</th><th>p ∨ q (OR)</th></tr></thead>
+  <tbody>
+    <tr><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+    <tr><td>T</td><td>F</td><td>F</td><td>T</td></tr>
+    <tr><td>F</td><td>T</td><td>F</td><td>T</td></tr>
+    <tr><td>F</td><td>F</td><td>F</td><td>F</td></tr>
+  </tbody>
+</table>
+<p>💡 <strong>Memory Tip:</strong> AND is strict: both must be true. OR is friendly: one true is enough.</p>
+
+<h4>🔹 Negation (~)</h4>
+<p><strong>Negation</strong> means flipping the truth value:<br>
+If p = “It is raining” (T), then ~p = “It is not raining” (F)</p>
+
+<h4>🔹 Symbolic Form of Statements</h4>
+<p>We use symbols instead of full sentences:</p>
+<ul>
+  <li>Let p = “It is hot”</li>
+  <li>q = “It is sunny”</li>
+</ul>
+<p>Then:</p>
+<ul>
+  <li>“It is not hot” → ~p</li>
+  <li>“It is hot and sunny” → p ∧ q</li>
+  <li>“It is not hot but sunny” → ~p ∧ q</li>
+  <li>“It is neither hot nor sunny” → ~p ∧ ~q</li>
+</ul>
+
+<h4>🔹 Translating Real Sentences to Symbols</h4>
+<p>Let:</p>
+<ul>
+  <li>h = “Zia is healthy”</li>
+  <li>w = “Zia is wealthy”</li>
+  <li>s = “Zia is wise”</li>
+</ul>
+<p>Then:</p>
+<ul>
+  <li>“Zia is healthy and wealthy but not wise” → (h ∧ w) ∧ ~s</li>
+  <li>“Zia is not wealthy but is healthy and wise” → ~w ∧ (h ∧ s)</li>
+</ul>
+
+<h4>🔹 Summary Checklist</h4>
+<ul>
+  <li>✅ Identify statements</li>
+  <li>✅ Understand AND, OR, NOT</li>
+  <li>✅ Translate to logic symbols</li>
+  <li>✅ Create truth tables</li>
+  <li>✅ Break down compound statements</li>
+</ul>
+
+<h4>🔸 Why It Matters in Real Life</h4>
+<ul>
+  <li>💻 Used in computer science: decision-making in programming</li>
+  <li>🧠 Used in everyday reasoning: understanding consequences</li>
+  <li>⚖️ Helps in math, law, and philosophy</li>
+</ul>
+
+<h4>Quiz</h4>
+<div class="quiz">
+  <div class="quiz-question">
+    <p>1. Which of the following is a proposition?</p>
+    <div class="quiz-option"><input type="radio" name="q1"> Close the door</div>
+    <div class="quiz-option"><input type="radio" name="q1"> What is your name?</div>
+    <div class="quiz-option"><input type="radio" name="q1"> 5 is a prime number</div>
+    <div class="quiz-option"><input type="radio" name="q1"> Read this book</div>
+  </div>
+  <div class="quiz-question">
+    <p>2. Which one is a compound statement?</p>
+    <div class="quiz-option"><input type="radio" name="q2"> It is raining</div>
+    <div class="quiz-option"><input type="radio" name="q2"> Ali is tall and smart</div>
+    <div class="quiz-option"><input type="radio" name="q2"> The sky is blue</div>
+    <div class="quiz-option"><input type="radio" name="q2"> Water boils at 100°C</div>
+  </div>
+  <div class="quiz-question">
+    <p>3. What is the negation of "Ali is sleeping"?</p>
+    <div class="quiz-option"><input type="radio" name="q3"> Ali is not sleeping</div>
+    <div class="quiz-option"><input type="radio" name="q3"> Ali is running</div>
+    <div class="quiz-option"><input type="radio" name="q3"> Ali is waking</div>
+    <div class="quiz-option"><input type="radio" name="q3"> None of the above</div>
+  </div>
+  <div class="quiz-question">
+    <p>4. What is the truth value of the statement "5 is even"?</p>
+    <div class="quiz-option"><input type="radio" name="q4"> True</div>
+    <div class="quiz-option"><input type="radio" name="q4"> False</div>
+    <div class="quiz-option"><input type="radio" name="q4"> Sometimes true</div>
+    <div class="quiz-option"><input type="radio" name="q4"> Not a proposition</div>
+  </div>
+  <div class="quiz-question">
+    <p>5. Which of the following uses AND?</p>
+    <div class="quiz-option"><input type="radio" name="q5"> It is raining or it is cloudy</div>
+    <div class="quiz-option"><input type="radio" name="q5"> It is not raining</div>
+    <div class="quiz-option"><input type="radio" name="q5"> It is raining and it is cloudy</div>
+    <div class="quiz-option"><input type="radio" name="q5"> If it rains then it floods</div>
+  </div>
+  <div class="quiz-question">
+    <p>6. Which symbol represents negation?</p>
+    <div class="quiz-option"><input type="radio" name="q6"> ∧</div>
+    <div class="quiz-option"><input type="radio" name="q6"> ∨</div>
+    <div class="quiz-option"><input type="radio" name="q6"> ¬</div>
+    <div class="quiz-option"><input type="radio" name="q6"> →</div>
+  </div>
+  <div class="quiz-question">
+    <p>7. What does the statement "~p" mean if p = "It is hot"?</p>
+    <div class="quiz-option"><input type="radio" name="q7"> It is hotter</div>
+    <div class="quiz-option"><input type="radio" name="q7"> It is not hot</div>
+    <div class="quiz-option"><input type="radio" name="q7"> It is warm</div>
+    <div class="quiz-option"><input type="radio" name="q7"> It is cold</div>
+  </div>
+  <div class="quiz-question">
+    <p>8. Which of these is a valid compound proposition?</p>
+    <div class="quiz-option"><input type="radio" name="q8"> Ali and Bilal</div>
+    <div class="quiz-option"><input type="radio" name="q8"> It is raining ∧ It is cold</div>
+    <div class="quiz-option"><input type="radio" name="q8"> Fast and Furious</div>
+    <div class="quiz-option"><input type="radio" name="q8"> The book</div>
+  </div>
+  <div class="quiz-question">
+    <p>9. Which connective means "or"?</p>
+    <div class="quiz-option"><input type="radio" name="q9"> ∧</div>
+    <div class="quiz-option"><input type="radio" name="q9"> ∨</div>
+    <div class="quiz-option"><input type="radio" name="q9"> ¬</div>
+    <div class="quiz-option"><input type="radio" name="q9"> →</div>
+  </div>
+  <div class="quiz-question">
+    <p>10. Which statement is always false?</p>
+    <div class="quiz-option"><input type="radio" name="q10"> p ∨ ~p</div>
+    <div class="quiz-option"><input type="radio" name="q10"> p ∧ ~p</div>
+    <div class="quiz-option"><input type="radio" name="q10"> p ∧ p</div>
+    <div class="quiz-option"><input type="radio" name="q10"> p ∨ p</div>
+  </div>
+  <div class="quiz-question">
+    <p>11. What is the result of F ∧ T?</p>
+    <div class="quiz-option"><input type="radio" name="q11"> T</div>
+    <div class="quiz-option"><input type="radio" name="q11"> F</div>
+    <div class="quiz-option"><input type="radio" name="q11"> T ∧ T</div>
+    <div class="quiz-option"><input type="radio" name="q11"> Not defined</div>
+  </div>
+  <div class="quiz-question">
+    <p>12. Which statement is logically equivalent to ~ (p ∨ q)?</p>
+    <div class="quiz-option"><input type="radio" name="q12"> ~p ∧ ~q</div>
+    <div class="quiz-option"><input type="radio" name="q12"> ~p ∨ q</div>
+    <div class="quiz-option"><input type="radio" name="q12"> p ∧ q</div>
+    <div class="quiz-option"><input type="radio" name="q12"> ~p ∧ q</div>
+  </div>
+  <div class="quiz-question">
+    <p>13. Which is the correct symbol for "if p then q"?</p>
+    <div class="quiz-option"><input type="radio" name="q13"> p ∨ q</div>
+    <div class="quiz-option"><input type="radio" name="q13"> p ∧ q</div>
+    <div class="quiz-option"><input type="radio" name="q13"> p → q</div>
+    <div class="quiz-option"><input type="radio" name="q13"> p ↔ q</div>
+  </div>
+  <div class="quiz-question">
+    <p>14. If p is true and q is false, what is the value of p → q?</p>
+    <div class="quiz-option"><input type="radio" name="q14"> True</div>
+    <div class="quiz-option"><input type="radio" name="q14"> False</div>
+    <div class="quiz-option"><input type="radio" name="q14"> Unknown</div>
+    <div class="quiz-option"><input type="radio" name="q14"> None</div>
+  </div>
+  <div class="quiz-question">
+    <p>15. Which of these is a tautology?</p>
+    <div class="quiz-option"><input type="radio" name="q15"> p ∨ ~p</div>
+    <div class="quiz-option"><input type="radio" name="q15"> p ∧ ~p</div>
+    <div class="quiz-option"><input type="radio" name="q15"> p ∨ p</div>
+    <div class="quiz-option"><input type="radio" name="q15"> ~p ∨ ~p</div>
+  </div>
+  <div class="quiz-question">
+    <p>16. Which logic symbol means "if and only if"?</p>
+    <div class="quiz-option"><input type="radio" name="q16"> →</div>
+    <div class="quiz-option"><input type="radio" name="q16"> ↔</div>
+    <div class="quiz-option"><input type="radio" name="q16"> ∧</div>
+    <div class="quiz-option"><input type="radio" name="q16"> ∨</div>
+  </div>
+  <div class="quiz-question">
+    <p>17. Which one is not a valid logical connective?</p>
+    <div class="quiz-option"><input type="radio" name="q17"> ∨</div>
+    <div class="quiz-option"><input type="radio" name="q17"> ∧</div>
+    <div class="quiz-option"><input type="radio" name="q17"> ≠</div>
+    <div class="quiz-option"><input type="radio" name="q17"> →</div>
+  </div>
+  <div class="quiz-question">
+    <p>18. In the statement "If it rains, then the ground gets wet", what is the hypothesis?</p>
+    <div class="quiz-option"><input type="radio" name="q18"> It rains</div>
+    <div class="quiz-option"><input type="radio" name="q18"> The ground gets wet</div>
+    <div class="quiz-option"><input type="radio" name="q18"> It is cloudy</div>
+    <div class="quiz-option"><input type="radio" name="q18"> Both are true</div>
+  </div>
+  <div class="quiz-question">
+    <p>19. Which logical law does p ∨ ~p represent?</p>
+    <div class="quiz-option"><input type="radio" name="q19"> Law of contradiction</div>
+    <div class="quiz-option"><input type="radio" name="q19"> Law of excluded middle</div>
+    <div class="quiz-option"><input type="radio" name="q19"> Commutative law</div>
+    <div class="quiz-option"><input type="radio" name="q19"> Associative law</div>
+  </div>
+  <div class="quiz-question">
+    <p>20. Which of the following is a contradiction?</p>
+    <div class="quiz-option"><input type="radio" name="q20"> p ∧ ~p</div>
+    <div class="quiz-option"><input type="radio" name="q20"> p ∨ ~p</div>
+    <div class="quiz-option"><input type="radio" name="q20"> p ∨ p</div>
+    <div class="quiz-option"><input type="radio" name="q20"> ~p ∧ ~p</div>
+  </div>
+</div>
+      <button class="btn btn-primary mt-3" onclick="gradeQuiz()">Submit Quiz</button>
+<div id="quiz-result" class="mt-3 fw-bold"></div>
+</div>
+<script>
+  const correctAnswers = {
+    q1: 2,
+    q2: 2,
+    q3: 1,
+    q4: 2,
+    q5: 3,
+    q6: 3,
+    q7: 2,
+    q8: 2,
+    q9: 2,
+    q10: 2,
+    q11: 2,
+    q12: 1,
+    q13: 3,
+    q14: 2,
+    q15: 1,
+    q16: 2,
+    q17: 3,
+    q18: 1,
+    q19: 2,
+    q20: 1
+  };
+
+  function gradeQuiz() {
+    let score = 0;
+    for (let i = 1; i <= 20; i++) {
+      const options = document.getElementsByName(`q${i}`);
+      if (options[correctAnswers[`q${i}`] - 1].checked) {
+        score++;
+      }
+    }
+    const resultBox = document.getElementById("quiz-result");
+    resultBox.innerText = `You scored ${score} out of 20.`;
+    resultBox.style.color = score >= 15 ? "green" : score >= 10 ? "orange" : "red";
+  }
+</script>
+<div class="tab-pane fade" id="lec2" role="tabpanel">
+      <h3>Lecture 2: Truth Tables</h3>
+      <p>Truth tables are used to evaluate logical expressions by listing all possible truth values.</p>
+      <p><strong>Example:</strong> Create a truth table for <code>p ∧ q</code></p>
+      <table class="table table-bordered">
+        <thead><tr><th>p</th><th>q</th><th>p ∧ q</th></tr></thead>
+        <tbody>
+          <tr><td>T</td><td>T</td><td>T</td></tr>
+          <tr><td>T</td><td>F</td><td>F</td></tr>
+          <tr><td>F</td><td>T</td><td>F</td></tr>
+          <tr><td>F</td><td>F</td><td>F</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tab-pane fade" id="lec3" role="tabpanel">
+      <h3>Lecture 3: Laws of Logic</h3>
+      <ul>
+        <li><strong>Identity Law:</strong> <code>p ∧ T = p</code>, <code>p ∨ F = p</code></li>
+        <li><strong>Domination Law:</strong> <code>p ∨ T = T</code>, <code>p ∧ F = F</code></li>
+        <li><strong>Double Negation:</strong> <code>¬(¬p) = p</code></li>
+        <li><strong>Commutative:</strong> <code>p ∧ q = q ∧ p</code></li>
+      </ul>
+    </div>
+
+    <div class="tab-pane fade" id="lec4" role="tabpanel">
+      <h3>Lecture 4: Biconditional</h3>
+      <p>The biconditional <code>p ↔ q</code> is true when both <code>p</code> and <code>q</code> are either true or false.</p>
+      <table class="table table-bordered">
+        <thead><tr><th>p</th><th>q</th><th>p ↔ q</th></tr></thead>
+        <tbody>
+          <tr><td>T</td><td>T</td><td>T</td></tr>
+          <tr><td>T</td><td>F</td><td>F</td></tr>
+          <tr><td>F</td><td>T</td><td>F</td></tr>
+          <tr><td>F</td><td>F</td><td>T</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tab-pane fade" id="lec5" role="tabpanel">
+      <h3>Lecture 5: Tautology and Contradiction</h3>
+      <p><strong>Tautology:</strong> A logical statement that is always true.<br>
+         Example: <code>p ∨ ¬p</code></p>
+      <p><strong>Contradiction:</strong> A logical statement that is always false.<br>
+         Example: <code>p ∧ ¬p</code></p>
+    </div>
+  </div>
+</div>
+<script>
+  function checkProposition() {
+    const input = document.getElementById("userInput").value.toLowerCase();
+    const result = document.getElementById("result");
+    if (input.includes("?") || input.includes("!")) {
+      result.innerText = "❌ Not a proposition (It's a question or command)";
+    } else {
+      result.innerText = "✅ This is a proposition.";
+    }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
